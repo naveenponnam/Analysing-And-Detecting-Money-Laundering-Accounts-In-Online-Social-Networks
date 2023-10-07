@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BENIGN OR MALIGNANT</title>
+
+   <!-- core STATIC/CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/animate.min.css" rel="stylesheet">
+    <link href="static/css/owl.carousel.css" rel="stylesheet">
+    <link href="static/css/owl.transitions.css" rel="stylesheet">
+    <link href="static/css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.js"></script>
+    <script src="static/js/respond.min.js"></script>
+    <![endif]-->
+
+</head><!--/head-->
+
+
+<body   id="home" class="homepage" >
+<div> <h3 align="center" style="color:red;">Analyzing and Detecting Money-Laundering Accounts in Online Social Networks</h3></div>
+
+<div class="container">
+
+		</div>
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="templates/index.html"><img src="static/images/mlico.jpg" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+
+
+                        <li class="scroll active"><a href="/">Home </a></li>
+                        <li class="scroll"><a href="/upload">Upload Dataset </a></li>
+                        <li class="scroll"><a href="/viewdata">View Dataset</a></li>
+                        <li class="scroll"><a href="/Preprocessing">Preprocessing</a></li>
+                        <li class="scroll"><a href="/training">Training</a></li>
+                        <li class="scroll"><a href="/testing">Prediction</a></li>
+                        <li class="scroll"><a href="/graph">DPR GRAPH</a></li>
+
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    <br>
+
+
+</div>
+
+</body>
+
+  {% if msg == "Prediction Success" %}
+            <div class="container">
+                {% if predvalue == 'MALIGNANT' %}
+                <div class="alert alert-danger alertstrong">
+                    <a href="#" class="close" aria-label="close" data-dismiss="alert">&times;</a>
+                    <strong>Type of user :: MALIGNANT</strong>
+                </div>
+                {% endif %}
+                {% if predvalue == 'BENIGN' %}
+                <div class="alert alert-success">
+                    <a href="#" class="close" aria-label="close" data-dismiss="alert">&times;</a>
+                    <strong>Type of user :: BENIGN</strong>
+                </div>
+                {% endif %}
+
+            </div>
+        {% endif %}
+
+<body >
+<center>
+<!--<h2>HTML Forms</h2>-->
+<center>
+  <form method="post" action="{{url_for('prediction')}}"  name="myForm"  >
+   <center><table>
+     <tr><td>Status :</td>
+     <td><input type="text" name="status" placeholder="Enter Status"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+     <tr><td>Friends</td>
+     <td><input type="text" name="friends" placeholder="Enter Friends"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+     <tr><td>Recharge</td>
+     <td><input type="text" name="recharge" placeholder="Enter Recharge"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+       <tr><td>Expenditure from banks</td>
+     <td><input type="text" name="banks" placeholder="Enter Bank Expenditure"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+     <tr><td>Expenditure from Gits</td>
+     <td><input type="text" name="gifts" placeholder="Enter Gifts Expenditure"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+       <tr><td>Followers</td>
+     <td><input type="text" name="followers" placeholder="Enter Followers"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+     <tr><td>Followee</td>
+     <td><input type="text" name="followee" placeholder="Enter Followee"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+       <tr><td>Time</td>
+     <td><input type="text" name="time" placeholder="Enter Time"></input></td></tr>
+     <tr ><td height="10"></td></tr>
+
+       <tr><td><input type="submit" value="Submit"></td></tr>
+        </table>
+   </center>
+</form>
+</center>
+
+
+    <footer id="footer">
+        <div class="container text-center">
+          All rights reserved ©
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/static/js?sensor=true"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/mousescroll.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/jquery.prettyPhoto.js"></script>
+    <script src="static/js/jquery.isotope.min.js"></script>
+    <script src="static/js/jquery.inview.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/main.js"></script>
+   <script src="static/js/scrolling-nav.js"></script>
+<script>
+
+
+    </script>
+    </body>
+</html>
+
